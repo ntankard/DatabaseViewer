@@ -1,0 +1,6 @@
+[submodule "JavaObjectDatabase"]
+	path = JavaObjectDatabase
+	url = https://github.com/ntankard/JavaObjectDatabase.git
+[submodule "DynamicGUI"]
+	path = DynamicGUI
+	url = https://github.com/ntankard/DynamicGUI.git
