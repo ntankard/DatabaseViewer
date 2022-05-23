@@ -31,12 +31,12 @@ public class FileLoader {
         for (int i = 0; i < paramList.length / 2; i++) {
             Type type = Type.getOrCreateType(paramList[i * 2 + 1], file.getSaveInstance(), false);
             Column column = new Column(file, paramList[i * 2], type).add();
-            if (column.getName().equals("getId")) {
+            if (column.getName().equals("getId") || column.getName().equals("DataObject_Id")) {
                 if (file.getIDColumn() != null) {
                     throw new RuntimeException();
                 }
                 file.setIDColumn(column);
-            } else if (column.getName().equals("getName")) {
+            } else if (column.getName().equals("getName")  || column.getName().equals("NamedDataObject_Name")) {
                 if (file.getNameColumn() != null) {
                     throw new RuntimeException();
                 }
